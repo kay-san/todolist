@@ -17,13 +17,17 @@ const Sidebar = ({selectedState}) => {
     ['Chats', <IoMdChatbubbles size={24} />], 
     ['Calender', <IoMdCalendar size={24} />],
   ]
+  const toolArray = [
+    ['Settings', <IoMdSettings  size={24} />],
+    ['Log Out', <IoLogOutOutline  size={24} />],
+  ]
   //useState hook returns an array containing the state itselt and a function to change the state.
   //anything you declare is immutable. so to change the values of your state, always use the function provided by useState.
   return (
     <Container>
         <Title />
         <NavItems items={navItemArray} selectedState={[selected, setSelected]} /> 
-        <Tools />
+        <Tools items={toolArray} selectedState={[selected, setSelected]}/>
     </Container>
   )
 }
